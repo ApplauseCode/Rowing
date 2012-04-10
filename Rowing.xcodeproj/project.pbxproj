@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D00C0F015323CF100D7A3E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D00C0EF15323CF100D7A3E4 /* UIKit.framework */; };
+		9D00C0F215323CF100D7A3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D00C0F115323CF100D7A3E4 /* Foundation.framework */; };
+		9D00C0F415323CF100D7A3E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D00C0F315323CF100D7A3E4 /* CoreGraphics.framework */; };
+		9D00C0FA15323CF100D7A3E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D00C0F815323CF100D7A3E4 /* InfoPlist.strings */; };
+		9D00C0FC15323CF100D7A3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C0FB15323CF100D7A3E4 /* main.m */; };
+		9D00C10015323CF100D7A3E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */; };
+		9D00C11015323D7400D7A3E4 /* TapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */; };
+		9D00C11115323D7400D7A3E4 /* TapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */; };
+		9D00C1141532568300D7A3E4 /* SPM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C1131532568300D7A3E4 /* SPM.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9D00C0EB15323CF100D7A3E4 /* Rowing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rowing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D00C0EF15323CF100D7A3E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9D00C0F115323CF100D7A3E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9D00C0F315323CF100D7A3E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9D00C0F715323CF100D7A3E4 /* Rowing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rowing-Info.plist"; sourceTree = "<group>"; };
+		9D00C0F915323CF100D7A3E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9D00C0FB15323CF100D7A3E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D00C0FD15323CF100D7A3E4 /* Rowing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rowing-Prefix.pch"; sourceTree = "<group>"; };
+		9D00C0FE15323CF100D7A3E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewViewController.h; sourceTree = "<group>"; };
+		9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewViewController.m; sourceTree = "<group>"; };
+		9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapViewViewController.xib; sourceTree = "<group>"; };
+		9D00C1121532568300D7A3E4 /* SPM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPM.h; sourceTree = "<group>"; };
+		9D00C1131532568300D7A3E4 /* SPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPM.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D00C0E815323CF100D7A3E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D00C0F015323CF100D7A3E4 /* UIKit.framework in Frameworks */,
+				9D00C0F215323CF100D7A3E4 /* Foundation.framework in Frameworks */,
+				9D00C0F415323CF100D7A3E4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D00C0E015323CF100D7A3E4 = {
+			isa = PBXGroup;
+			children = (
+				9D00C0F515323CF100D7A3E4 /* Rowing */,
+				9D00C0EE15323CF100D7A3E4 /* Frameworks */,
+				9D00C0EC15323CF100D7A3E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D00C0EC15323CF100D7A3E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C0EB15323CF100D7A3E4 /* Rowing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D00C0EE15323CF100D7A3E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C0EF15323CF100D7A3E4 /* UIKit.framework */,
+				9D00C0F115323CF100D7A3E4 /* Foundation.framework */,
+				9D00C0F315323CF100D7A3E4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D00C0F515323CF100D7A3E4 /* Rowing */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C0FE15323CF100D7A3E4 /* AppDelegate.h */,
+				9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */,
+				9D00C1121532568300D7A3E4 /* SPM.h */,
+				9D00C1131532568300D7A3E4 /* SPM.m */,
+				9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */,
+				9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */,
+				9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */,
+				9D00C0F615323CF100D7A3E4 /* Supporting Files */,
+			);
+			path = Rowing;
+			sourceTree = "<group>";
+		};
+		9D00C0F615323CF100D7A3E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C0F715323CF100D7A3E4 /* Rowing-Info.plist */,
+				9D00C0F815323CF100D7A3E4 /* InfoPlist.strings */,
+				9D00C0FB15323CF100D7A3E4 /* main.m */,
+				9D00C0FD15323CF100D7A3E4 /* Rowing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D00C0EA15323CF100D7A3E4 /* Rowing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D00C10315323CF100D7A3E4 /* Build configuration list for PBXNativeTarget "Rowing" */;
+			buildPhases = (
+				9D00C0E715323CF100D7A3E4 /* Sources */,
+				9D00C0E815323CF100D7A3E4 /* Frameworks */,
+				9D00C0E915323CF100D7A3E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rowing;
+			productName = Rowing;
+			productReference = 9D00C0EB15323CF100D7A3E4 /* Rowing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D00C0E215323CF100D7A3E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9D00C0E515323CF100D7A3E4 /* Build configuration list for PBXProject "Rowing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9D00C0E015323CF100D7A3E4;
+			productRefGroup = 9D00C0EC15323CF100D7A3E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D00C0EA15323CF100D7A3E4 /* Rowing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D00C0E915323CF100D7A3E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D00C0FA15323CF100D7A3E4 /* InfoPlist.strings in Resources */,
+				9D00C11115323D7400D7A3E4 /* TapViewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D00C0E715323CF100D7A3E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D00C0FC15323CF100D7A3E4 /* main.m in Sources */,
+				9D00C10015323CF100D7A3E4 /* AppDelegate.m in Sources */,
+				9D00C11015323D7400D7A3E4 /* TapViewViewController.m in Sources */,
+				9D00C1141532568300D7A3E4 /* SPM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D00C0F815323CF100D7A3E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D00C0F915323CF100D7A3E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D00C10115323CF100D7A3E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D00C10215323CF100D7A3E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D00C10415323CF100D7A3E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rowing/Rowing-Prefix.pch";
+				INFOPLIST_FILE = "Rowing/Rowing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9D00C10515323CF100D7A3E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rowing/Rowing-Prefix.pch";
+				INFOPLIST_FILE = "Rowing/Rowing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D00C0E515323CF100D7A3E4 /* Build configuration list for PBXProject "Rowing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D00C10115323CF100D7A3E4 /* Debug */,
+				9D00C10215323CF100D7A3E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D00C10315323CF100D7A3E4 /* Build configuration list for PBXNativeTarget "Rowing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D00C10415323CF100D7A3E4 /* Debug */,
+				9D00C10515323CF100D7A3E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D00C0E215323CF100D7A3E4 /* Project object */;
+}
