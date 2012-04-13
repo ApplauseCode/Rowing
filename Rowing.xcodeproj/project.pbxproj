@@ -15,7 +15,27 @@
 		9D00C10015323CF100D7A3E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */; };
 		9D00C11015323D7400D7A3E4 /* TapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */; };
 		9D00C11115323D7400D7A3E4 /* TapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */; };
-		9D00C1141532568300D7A3E4 /* SPM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C1131532568300D7A3E4 /* SPM.m */; };
+		9D00C1141532568300D7A3E4 /* Lane.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C1131532568300D7A3E4 /* Lane.m */; };
+		CEF1CEC815350FF100FDF292 /* SplitTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */; };
+		CEF1CECC1535107400FDF292 /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECA1535107400FDF292 /* blue_button.png */; };
+		CEF1CECD1535107400FDF292 /* blue_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECB1535107400FDF292 /* blue_button@2x.png */; };
+		CEF1CED01535109500FDF292 /* gray_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECE1535109500FDF292 /* gray_button.png */; };
+		CEF1CED11535109500FDF292 /* gray_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECF1535109500FDF292 /* gray_button@2x.png */; };
+		CEF1CEEC15374FD600FDF292 /* TimeParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CEEB15374FD600FDF292 /* TimeParse.m */; };
+		CEF1CEF0153774AB00FDF292 /* NationalRowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */; };
+		CEF1CEF1153774AB00FDF292 /* NationalRowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */; };
+		CEF1CEF31537757800FDF292 /* Hart2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF21537757800FDF292 /* Hart2.jpg */; };
+		CEF1CEF61537797A00FDF292 /* glyphicons_261_buoy.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */; };
+		CEF1CEF71537797A00FDF292 /* glyphicons_261_buoy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF51537797A00FDF292 /* glyphicons_261_buoy@2x.png */; };
+		CEF1CEFA1537798A00FDF292 /* glyphicons_266_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF81537798A00FDF292 /* glyphicons_266_flag.png */; };
+		CEF1CEFB1537798A00FDF292 /* glyphicons_266_flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF91537798A00FDF292 /* glyphicons_266_flag@2x.png */; };
+		CEF1CEFE1537799200FDF292 /* glyphicons_025_binoculars.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEFC1537799200FDF292 /* glyphicons_025_binoculars.png */; };
+		CEF1CEFF1537799200FDF292 /* glyphicons_025_binoculars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEFD1537799200FDF292 /* glyphicons_025_binoculars@2x.png */; };
+		CEFE338E1534F8870082E284 /* SplitTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE338D1534F8870082E284 /* SplitTimeViewController.m */; };
+		CEFE33921534F9B50082E284 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE33901534F9B50082E284 /* InfoViewController.m */; };
+		CEFE33931534F9B50082E284 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE33911534F9B50082E284 /* InfoViewController.xib */; };
+		CEFE33971534FBE40082E284 /* OarSpotterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE33951534FBE40082E284 /* OarSpotterViewController.m */; };
+		CEFE33981534FBE40082E284 /* OarSpotterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE33961534FBE40082E284 /* OarSpotterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +49,36 @@
 		9D00C0FD15323CF100D7A3E4 /* Rowing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rowing-Prefix.pch"; sourceTree = "<group>"; };
 		9D00C0FE15323CF100D7A3E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewViewController.h; sourceTree = "<group>"; };
-		9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewViewController.m; sourceTree = "<group>"; };
-		9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapViewViewController.xib; sourceTree = "<group>"; };
-		9D00C1121532568300D7A3E4 /* SPM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPM.h; sourceTree = "<group>"; };
-		9D00C1131532568300D7A3E4 /* SPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPM.m; sourceTree = "<group>"; };
+		9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapViewViewController.h; path = Rowing/TapViewViewController.h; sourceTree = "<group>"; };
+		9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapViewViewController.m; path = Rowing/TapViewViewController.m; sourceTree = "<group>"; };
+		9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TapViewViewController.xib; path = Rowing/TapViewViewController.xib; sourceTree = "<group>"; };
+		9D00C1121532568300D7A3E4 /* Lane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lane.h; path = Rowing/Lane.h; sourceTree = "<group>"; };
+		9D00C1131532568300D7A3E4 /* Lane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lane.m; path = Rowing/Lane.m; sourceTree = "<group>"; };
+		CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitTimeViewController.xib; sourceTree = "<group>"; };
+		CEF1CECA1535107400FDF292 /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
+		CEF1CECB1535107400FDF292 /* blue_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button@2x.png"; sourceTree = "<group>"; };
+		CEF1CECE1535109500FDF292 /* gray_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_button.png; sourceTree = "<group>"; };
+		CEF1CECF1535109500FDF292 /* gray_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_button@2x.png"; sourceTree = "<group>"; };
+		CEF1CEEA15374FD600FDF292 /* TimeParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeParse.h; sourceTree = "<group>"; };
+		CEF1CEEB15374FD600FDF292 /* TimeParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeParse.m; sourceTree = "<group>"; };
+		CEF1CEED153774AB00FDF292 /* NationalRowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NationalRowingViewController.h; sourceTree = "<group>"; };
+		CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NationalRowingViewController.m; sourceTree = "<group>"; };
+		CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NationalRowingViewController.xib; sourceTree = "<group>"; };
+		CEF1CEF21537757800FDF292 /* Hart2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hart2.jpg; sourceTree = "<group>"; };
+		CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_261_buoy.png; sourceTree = "<group>"; };
+		CEF1CEF51537797A00FDF292 /* glyphicons_261_buoy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_261_buoy@2x.png"; sourceTree = "<group>"; };
+		CEF1CEF81537798A00FDF292 /* glyphicons_266_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_266_flag.png; sourceTree = "<group>"; };
+		CEF1CEF91537798A00FDF292 /* glyphicons_266_flag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_266_flag@2x.png"; sourceTree = "<group>"; };
+		CEF1CEFC1537799200FDF292 /* glyphicons_025_binoculars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_025_binoculars.png; sourceTree = "<group>"; };
+		CEF1CEFD1537799200FDF292 /* glyphicons_025_binoculars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_025_binoculars@2x.png"; sourceTree = "<group>"; };
+		CEFE338C1534F8870082E284 /* SplitTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitTimeViewController.h; sourceTree = "<group>"; };
+		CEFE338D1534F8870082E284 /* SplitTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitTimeViewController.m; sourceTree = "<group>"; };
+		CEFE338F1534F9B50082E284 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		CEFE33901534F9B50082E284 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		CEFE33911534F9B50082E284 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		CEFE33941534FBE40082E284 /* OarSpotterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OarSpotterViewController.h; sourceTree = "<group>"; };
+		CEFE33951534FBE40082E284 /* OarSpotterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OarSpotterViewController.m; sourceTree = "<group>"; };
+		CEFE33961534FBE40082E284 /* OarSpotterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OarSpotterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +98,9 @@
 		9D00C0E015323CF100D7A3E4 = {
 			isa = PBXGroup;
 			children = (
+				CEF1CEC91535105B00FDF292 /* Images */,
+				CEFE338B1534F8130082E284 /* Model */,
+				CEFE33891534F8030082E284 /* View Controllers */,
 				9D00C0F515323CF100D7A3E4 /* Rowing */,
 				9D00C0EE15323CF100D7A3E4 /* Frameworks */,
 				9D00C0EC15323CF100D7A3E4 /* Products */,
@@ -82,11 +130,6 @@
 			children = (
 				9D00C0FE15323CF100D7A3E4 /* AppDelegate.h */,
 				9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */,
-				9D00C1121532568300D7A3E4 /* SPM.h */,
-				9D00C1131532568300D7A3E4 /* SPM.m */,
-				9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */,
-				9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */,
-				9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */,
 				9D00C0F615323CF100D7A3E4 /* Supporting Files */,
 			);
 			path = Rowing;
@@ -101,6 +144,57 @@
 				9D00C0FD15323CF100D7A3E4 /* Rowing-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEF1CEC91535105B00FDF292 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1CEFC1537799200FDF292 /* glyphicons_025_binoculars.png */,
+				CEF1CEFD1537799200FDF292 /* glyphicons_025_binoculars@2x.png */,
+				CEF1CEF81537798A00FDF292 /* glyphicons_266_flag.png */,
+				CEF1CEF91537798A00FDF292 /* glyphicons_266_flag@2x.png */,
+				CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */,
+				CEF1CEF51537797A00FDF292 /* glyphicons_261_buoy@2x.png */,
+				CEF1CEF21537757800FDF292 /* Hart2.jpg */,
+				CEF1CECA1535107400FDF292 /* blue_button.png */,
+				CEF1CECB1535107400FDF292 /* blue_button@2x.png */,
+				CEF1CECE1535109500FDF292 /* gray_button.png */,
+				CEF1CECF1535109500FDF292 /* gray_button@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CEFE33891534F8030082E284 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C10D15323D7400D7A3E4 /* TapViewViewController.h */,
+				9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */,
+				9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */,
+				CEFE33941534FBE40082E284 /* OarSpotterViewController.h */,
+				CEFE33951534FBE40082E284 /* OarSpotterViewController.m */,
+				CEFE33961534FBE40082E284 /* OarSpotterViewController.xib */,
+				CEFE338C1534F8870082E284 /* SplitTimeViewController.h */,
+				CEFE338D1534F8870082E284 /* SplitTimeViewController.m */,
+				CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */,
+				CEF1CEED153774AB00FDF292 /* NationalRowingViewController.h */,
+				CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */,
+				CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */,
+				CEFE338F1534F9B50082E284 /* InfoViewController.h */,
+				CEFE33901534F9B50082E284 /* InfoViewController.m */,
+				CEFE33911534F9B50082E284 /* InfoViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CEFE338B1534F8130082E284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C1121532568300D7A3E4 /* Lane.h */,
+				9D00C1131532568300D7A3E4 /* Lane.m */,
+				CEF1CEEA15374FD600FDF292 /* TimeParse.h */,
+				CEF1CEEB15374FD600FDF292 /* TimeParse.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +249,21 @@
 			files = (
 				9D00C0FA15323CF100D7A3E4 /* InfoPlist.strings in Resources */,
 				9D00C11115323D7400D7A3E4 /* TapViewViewController.xib in Resources */,
+				CEFE33931534F9B50082E284 /* InfoViewController.xib in Resources */,
+				CEFE33981534FBE40082E284 /* OarSpotterViewController.xib in Resources */,
+				CEF1CEC815350FF100FDF292 /* SplitTimeViewController.xib in Resources */,
+				CEF1CECC1535107400FDF292 /* blue_button.png in Resources */,
+				CEF1CECD1535107400FDF292 /* blue_button@2x.png in Resources */,
+				CEF1CED01535109500FDF292 /* gray_button.png in Resources */,
+				CEF1CED11535109500FDF292 /* gray_button@2x.png in Resources */,
+				CEF1CEF1153774AB00FDF292 /* NationalRowingViewController.xib in Resources */,
+				CEF1CEF31537757800FDF292 /* Hart2.jpg in Resources */,
+				CEF1CEF61537797A00FDF292 /* glyphicons_261_buoy.png in Resources */,
+				CEF1CEF71537797A00FDF292 /* glyphicons_261_buoy@2x.png in Resources */,
+				CEF1CEFA1537798A00FDF292 /* glyphicons_266_flag.png in Resources */,
+				CEF1CEFB1537798A00FDF292 /* glyphicons_266_flag@2x.png in Resources */,
+				CEF1CEFE1537799200FDF292 /* glyphicons_025_binoculars.png in Resources */,
+				CEF1CEFF1537799200FDF292 /* glyphicons_025_binoculars@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +277,12 @@
 				9D00C0FC15323CF100D7A3E4 /* main.m in Sources */,
 				9D00C10015323CF100D7A3E4 /* AppDelegate.m in Sources */,
 				9D00C11015323D7400D7A3E4 /* TapViewViewController.m in Sources */,
-				9D00C1141532568300D7A3E4 /* SPM.m in Sources */,
+				9D00C1141532568300D7A3E4 /* Lane.m in Sources */,
+				CEFE338E1534F8870082E284 /* SplitTimeViewController.m in Sources */,
+				CEFE33921534F9B50082E284 /* InfoViewController.m in Sources */,
+				CEFE33971534FBE40082E284 /* OarSpotterViewController.m in Sources */,
+				CEF1CEEC15374FD600FDF292 /* TimeParse.m in Sources */,
+				CEF1CEF0153774AB00FDF292 /* NationalRowingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +386,7 @@
 				9D00C10515323CF100D7A3E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

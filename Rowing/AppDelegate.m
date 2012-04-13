@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "TapViewViewController.h"
+#import "OarSpotterViewController.h"
+#import "SplitTimeViewController.h"
+#import "NationalRowingViewController.h"
+
 
 @implementation AppDelegate
 
@@ -16,9 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    TapViewViewController *tvc = [[TapViewViewController alloc] init];
-    
-    self.window.rootViewController = tvc;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    OarSpotterViewController *osvc = [[OarSpotterViewController alloc] init];
+    SplitTimeViewController *stvc = [[SplitTimeViewController alloc] init];
+    NationalRowingViewController *nrvc = [[NationalRowingViewController alloc] initWithNibName:nil bundle:nil];
+    [tabBarController setViewControllers:[NSArray arrayWithObjects:osvc, stvc, nrvc, nil]];
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
