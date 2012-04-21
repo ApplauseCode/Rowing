@@ -16,6 +16,8 @@
 		9D00C11015323D7400D7A3E4 /* TapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C10E15323D7400D7A3E4 /* TapViewViewController.m */; };
 		9D00C11115323D7400D7A3E4 /* TapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */; };
 		9D00C1141532568300D7A3E4 /* Lane.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C1131532568300D7A3E4 /* Lane.m */; };
+		CEB8A1D0153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8A1CF153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.m */; };
+		CEB8A1D3153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8A1D2153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.m */; };
 		CEF1CEC815350FF100FDF292 /* SplitTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */; };
 		CEF1CECC1535107400FDF292 /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECA1535107400FDF292 /* blue_button.png */; };
 		CEF1CECD1535107400FDF292 /* blue_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECB1535107400FDF292 /* blue_button@2x.png */; };
@@ -54,6 +56,10 @@
 		9D00C10F15323D7400D7A3E4 /* TapViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TapViewViewController.xib; path = Rowing/TapViewViewController.xib; sourceTree = "<group>"; };
 		9D00C1121532568300D7A3E4 /* Lane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lane.h; path = Rowing/Lane.h; sourceTree = "<group>"; };
 		9D00C1131532568300D7A3E4 /* Lane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lane.m; path = Rowing/Lane.m; sourceTree = "<group>"; };
+		CEB8A1CE153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapGestureRecognizerWithTag.h; sourceTree = "<group>"; };
+		CEB8A1CF153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapGestureRecognizerWithTag.m; sourceTree = "<group>"; };
+		CEB8A1D1153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongPressGestureRecognizerWithTag.h; sourceTree = "<group>"; };
+		CEB8A1D2153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongPressGestureRecognizerWithTag.m; sourceTree = "<group>"; };
 		CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitTimeViewController.xib; sourceTree = "<group>"; };
 		CEF1CECA1535107400FDF292 /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
 		CEF1CECB1535107400FDF292 /* blue_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button@2x.png"; sourceTree = "<group>"; };
@@ -62,7 +68,7 @@
 		CEF1CEEA15374FD600FDF292 /* TimeParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeParse.h; sourceTree = "<group>"; };
 		CEF1CEEB15374FD600FDF292 /* TimeParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeParse.m; sourceTree = "<group>"; };
 		CEF1CEED153774AB00FDF292 /* NationalRowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NationalRowingViewController.h; sourceTree = "<group>"; };
-		CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NationalRowingViewController.m; sourceTree = "<group>"; };
+		CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NationalRowingViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NationalRowingViewController.xib; sourceTree = "<group>"; };
 		CEF1CEF21537757800FDF292 /* Hart2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hart2.jpg; sourceTree = "<group>"; };
 		CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_261_buoy.png; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 		9D00C0E015323CF100D7A3E4 = {
 			isa = PBXGroup;
 			children = (
+				CEB8A1C9153CCA8200D7A1C5 /* Custom */,
 				CEF1CEC91535105B00FDF292 /* Images */,
 				CEFE338B1534F8130082E284 /* Model */,
 				CEFE33891534F8030082E284 /* View Controllers */,
@@ -144,6 +151,17 @@
 				9D00C0FD15323CF100D7A3E4 /* Rowing-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEB8A1C9153CCA8200D7A1C5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8A1CE153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.h */,
+				CEB8A1CF153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.m */,
+				CEB8A1D1153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.h */,
+				CEB8A1D2153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.m */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 		CEF1CEC91535105B00FDF292 /* Images */ = {
@@ -283,6 +301,8 @@
 				CEFE33971534FBE40082E284 /* OarSpotterViewController.m in Sources */,
 				CEF1CEEC15374FD600FDF292 /* TimeParse.m in Sources */,
 				CEF1CEF0153774AB00FDF292 /* NationalRowingViewController.m in Sources */,
+				CEB8A1D0153CCCAC00D7A1C5 /* TapGestureRecognizerWithTag.m in Sources */,
+				CEB8A1D3153CD20B00D7A1C5 /* LongPressGestureRecognizerWithTag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

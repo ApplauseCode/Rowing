@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [[self tabBarItem] setTitle:@"NRF"];
+        [[self tabBarItem] setTitle:@"Oar"];
         [[self tabBarItem] setImage:[UIImage imageNamed:@"glyphicons_266_flag"]];
     }
     return self;

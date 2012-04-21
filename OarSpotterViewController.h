@@ -10,11 +10,12 @@
 
 @interface OarSpotterViewController : UIViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *spmLabel_1;
-@property (weak, nonatomic) IBOutlet UILabel *timerLabel_1;
-@property (weak, nonatomic) IBOutlet UITextField *LaneName;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *laneNames;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *spmLabels;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *timeLabels;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
-- (IBAction)spmButton_1:(id)sender;
+- (IBAction)spmButton:(id)sender;
 - (IBAction)startAll:(id)sender;
 
 @end

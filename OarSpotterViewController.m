@@ -9,35 +9,48 @@
 #import "OarSpotterViewController.h"
 #import "Lane.h"
 #import "TimeParse.h"
+#import "LongPressGestureRecognizerWithTag.h"
+#import "TapGestureRecognizerWithTag.h"
+
+#define LANES 6
 
 @interface OarSpotterViewController ()
 
-@property (nonatomic,strong) Lane *lane_1;
+@property (nonatomic,strong) NSMutableArray *lanes;
 @property (nonatomic, strong) NSTimer *stopWatch;
-@property (nonatomic) BOOL timerOn_1;
+@property (nonatomic, strong) NSMutableArray *timersOn;
 
 - (void)stopWatchTick:(NSTimer *)aTimer;
-- (void)timerTap:(UITapGestureRecognizer *)gr;
-- (void)resetTimer:(UILongPressGestureRecognizer *)gr;
+- (void)timerTap:(TapGestureRecognizerWithTag *)gr;
+- (void)resetTimer:(LongPressGestureRecognizerWithTag *)gr;
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up;
 
 @end
 
 @implementation OarSpotterViewController
-@synthesize spmLabel_1;
-@synthesize timerLabel_1;
-@synthesize LaneName;
-@synthesize timerOn_1;
-@synthesize lane_1;
+@synthesize laneNames;
+@synthesize spmLabels;
+@synthesize timeLabels;
+@synthesize navBar;
+@synthesize timersOn;
+@synthesize lanes;
 @synthesize stopWatch;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    Lane *lane;
+    lanes = [[NSMutableArray alloc] initWithCapacity:LANES];
+    timersOn = [[NSMutableArray alloc] initWithCapacity:LANES];
     if (self) {
         [[self tabBarItem] setTitle:@"Strokes"];
         [[self tabBarItem] setImage:[UIImage imageNamed:@"glyphicons_025_binoculars"]];
-        lane_1 = [[Lane alloc] init];
-        timerOn_1 = NO;
+        for (int i = 0; i < LANES; i++) {
+            lane = [[Lane alloc] init];
+            [lanes addObject:lane];
+            NSNumber *off = [NSNumber numberWithBool:NO];
+            [timersOn addObject:off];
+        }
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         stopWatch = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(stopWatchTick:) userInfo:nil repeats:YES];
         [runLoop addTimer:stopWatch forMode:NSRunLoopCommonModes];
@@ -49,25 +62,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UILongPressGestureRecognizer *timerLongPress_1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(resetTimer:)];
-    UITapGestureRecognizer *timerTap_1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(timerTap:)];
-    [timerLabel_1 addGestureRecognizer:timerTap_1];
-    [timerLabel_1 addGestureRecognizer:timerLongPress_1];
-    [LaneName setDelegate:self];
+    for (int i = 0; i < LANES; i++) {
+        LongPressGestureRecognizerWithTag *timerLongPress = [[LongPressGestureRecognizerWithTag alloc] initWithTarget:self action:@selector(resetTimer:)];
+        [timerLongPress setTag:i];
+        TapGestureRecognizerWithTag *timeTap = [[TapGestureRecognizerWithTag alloc] initWithTarget:self action:@selector(timerTap:)];
+        [timeTap setTag:i];
+        [[self.timeLabels  objectAtIndex:i] addGestureRecognizer:timeTap];
+        [[self.timeLabels objectAtIndex:i] addGestureRecognizer:timerLongPress];
+        [[laneNames objectAtIndex:i] setDelegate:self];
+    }
 }
 
 - (void)viewDidUnload
 {
-    [self setTimerLabel_1:nil];
-    [self setLaneName:nil];
+    [self setSpmLabels:nil];
+    [self setTimeLabels:nil];
+    [self setLaneNames:nil];
+    [self setNavBar:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{   
+    int yDelta = - 167;
+    if (textField.tag<4) return;
+    yDelta = (up ? yDelta : -yDelta);
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.frame = CGRectOffset(self.view.frame, 0, yDelta);
+//        navBar.frame = CGRectOffset(navBar.frame, 0, -yDelta);
+    }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -76,37 +115,46 @@
     return YES;
 }
 
-- (IBAction)spmButton_1:(id)sender {
-    double strokes = [lane_1 spm:[NSDate date]];
-    [spmLabel_1 setText:[NSString stringWithFormat:@"%3.1f",strokes]];
+- (IBAction)spmButton:(UIButton *)sender {
+    double strokes = [[lanes objectAtIndex:sender.tag] spm:[NSDate date]];
+    [[spmLabels objectAtIndex:sender.tag] setText:[NSString stringWithFormat:@"%3.1f",strokes]];
 }
 
 - (IBAction)startAll:(id)sender {
+    for (int i = 0; i < LANES; i++) {
+        [[lanes objectAtIndex:i] setStartTime:[NSDate date]];
+        [timersOn replaceObjectAtIndex:i withObject:[NSNumber numberWithBool:YES]];
+    }
 }
 
 - (void)stopWatchTick:(NSTimer *)aTimer
 {
     double et;
-    if (timerOn_1) {
-        et = [lane_1 updateElapsedTime:[NSDate date]];
-        [timerLabel_1 setText:[TimeParse toString:et]];
+    for (int i = 0; i < LANES; i++) {
+        if ([[timersOn objectAtIndex:i] boolValue]) {
+            et = [[lanes objectAtIndex:i] updateElapsedTime:[NSDate date]];
+            [[timeLabels objectAtIndex:i] setText:[TimeParse toString:et]];
+        }
     }
 }
 
-- (void)resetTimer:(UILongPressGestureRecognizer *)gr
+- (void)resetTimer:(LongPressGestureRecognizerWithTag *)gr
 {
-    [lane_1 resetStartTime];
-    [timerLabel_1 setText:[TimeParse toString:0.0]];
-    self.timerOn_1 = NO;
+    int tag = gr.tag;
+    [[self.timeLabels objectAtIndex:tag] setText:[TimeParse toString:0.0]];
+    [self.timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]]; 
+    [[self.lanes objectAtIndex:tag] resetStartTime];
 }
 
-- (void)timerTap:(UITapGestureRecognizer *)gr {
-    if (!timerOn_1) {
-        lane_1.startTime = [NSDate date];
-        timerOn_1 = YES;
+- (void)timerTap:(TapGestureRecognizerWithTag *)gr {
+    int tag = gr.tag;
+    if (![[timersOn objectAtIndex:tag] boolValue]) {
+        [[lanes objectAtIndex:tag] setStartTime:[NSDate date]];
+        [timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:YES]];
     }
-    else 
-        timerOn_1 = NO;
+    else {
+        [timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]];
+    }
 }
      
 @end
