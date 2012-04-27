@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NationalRowingViewController : UIViewController
+@interface NationalRowingViewController : UIViewController <UIScrollViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIScrollView *photoScroll;
+@property (weak, nonatomic) IBOutlet UIPageControl *photoPageControl;
+
+- (IBAction)pageControlValueChanged:(id)sender;
 
 @end

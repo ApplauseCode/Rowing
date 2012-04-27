@@ -70,6 +70,11 @@
         [[self.timeLabels  objectAtIndex:i] addGestureRecognizer:timeTap];
         [[self.timeLabels objectAtIndex:i] addGestureRecognizer:timerLongPress];
         [[laneNames objectAtIndex:i] setDelegate:self];
+//        CGAffineTransform t = CGAffineTransformMakeRotation(M_PI_2);
+//        t = CGAffineTransformTranslate(t, 65, 67.5);
+//        [[laneNames objectAtIndex:0] setTransform:t];
+//        [[laneNames objectAtIndex:0] setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
+//        [[laneNames objectAtIndex:0] setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     }
 }
 
