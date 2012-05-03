@@ -35,6 +35,9 @@
 @synthesize timersOn;
 @synthesize lanes;
 @synthesize stopWatch;
+@synthesize startButton;
+@synthesize navItems;
+@synthesize resetButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,12 +73,11 @@
         [[self.timeLabels  objectAtIndex:i] addGestureRecognizer:timeTap];
         [[self.timeLabels objectAtIndex:i] addGestureRecognizer:timerLongPress];
         [[laneNames objectAtIndex:i] setDelegate:self];
-//        CGAffineTransform t = CGAffineTransformMakeRotation(M_PI_2);
-//        t = CGAffineTransformTranslate(t, 65, 67.5);
-//        [[laneNames objectAtIndex:0] setTransform:t];
-//        [[laneNames objectAtIndex:0] setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
-//        [[laneNames objectAtIndex:0] setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     }
+    startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(startAll:)];
+    resetButton = [[UIBarButtonItem alloc] initWithTitle: @"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetAll:)];
+    [navItems setRightBarButtonItem:startButton];
+    [navItems setLeftBarButtonItem:resetButton];
 }
 
 - (void)viewDidUnload
@@ -84,6 +86,7 @@
     [self setTimeLabels:nil];
     [self setLaneNames:nil];
     [self setNavBar:nil];
+    [self setNavItems:nil];
     [super viewDidUnload];
 }
 
@@ -122,13 +125,24 @@
 
 - (IBAction)spmButton:(UIButton *)sender {
     double strokes = [[lanes objectAtIndex:sender.tag] spm:[NSDate date]];
-    [[spmLabels objectAtIndex:sender.tag] setText:[NSString stringWithFormat:@"%3.1f",strokes]];
+    NSString *spmString;
+    spmString = [NSString stringWithFormat:@"%3.1f",strokes];
+    [[spmLabels objectAtIndex:sender.tag] setText:spmString];
 }
 
-- (IBAction)startAll:(id)sender {
+- (void)startAll:(id)sender {
     for (int i = 0; i < LANES; i++) {
         [[lanes objectAtIndex:i] setStartTime:[NSDate date]];
         [timersOn replaceObjectAtIndex:i withObject:[NSNumber numberWithBool:YES]];
+    }
+}
+
+- (void)resetAll:(id)sender{
+    for (int tag = 0; tag < 6; tag++) {
+        
+        [[self.timeLabels objectAtIndex:tag] setText:[TimeParse toString:0.0]];
+        [self.timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]]; 
+        [[self.lanes objectAtIndex:tag] resetStartTime];
     }
 }
 
@@ -161,5 +175,5 @@
         [timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]];
     }
 }
-     
+          
 @end

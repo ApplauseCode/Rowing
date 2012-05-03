@@ -14,8 +14,12 @@
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *spmLabels;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *timeLabels;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (strong, nonatomic) UIBarButtonItem *resetButton;
+@property (strong, nonatomic) UIBarButtonItem *startButton;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navItems;
 
 - (IBAction)spmButton:(id)sender;
-- (IBAction)startAll:(id)sender;
+- (void)startAll:(id)sender;
+- (void)resetAll:(id)sender;
 
 @end
