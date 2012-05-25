@@ -63,8 +63,7 @@ const NSUInteger kNumImages		= 5;
 	photoScroll.scrollEnabled = YES;	
 	photoScroll.pagingEnabled = YES;
 	photoScroll.showsHorizontalScrollIndicator = NO;
-	NSUInteger i;
-	for (i = 1; i <= kNumImages; i++)
+	for (int i = 1; i <= kNumImages; i++)
 	{
 		NSString *imageName = [NSString stringWithFormat:@"image%d.jpg", i];
 		UIImage *image = [UIImage imageNamed:imageName];

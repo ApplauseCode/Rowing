@@ -10,6 +10,7 @@
 #import "OarSpotterViewController.h"
 #import "SplitTimeViewController.h"
 #import "NationalRowingViewController.h"
+#import "TestFlight.h"
 
 
 @implementation AppDelegate
@@ -18,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"abee907a7b86eef60b5a2c4e815e7bd8_ODY4NjcyMDEyLTA1LTAzIDE0OjMwOjU0Ljg0NTg4Mw"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     OarSpotterViewController *osvc = [[OarSpotterViewController alloc] init];

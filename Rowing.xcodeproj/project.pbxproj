@@ -24,6 +24,9 @@
 		CEB8A20315470C1600D7A1C5 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEB8A20215470C1600D7A1C5 /* image2.jpg */; };
 		CEB8A20615489A8A00D7A1C5 /* glyphicons_012_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB8A20415489A8A00D7A1C5 /* glyphicons_012_heart.png */; };
 		CEB8A20715489A8A00D7A1C5 /* glyphicons_012_heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB8A20515489A8A00D7A1C5 /* glyphicons_012_heart@2x.png */; };
+		CECA62D4155304F100ECFC0A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECA62D2155304F100ECFC0A /* libTestFlight.a */; };
+		CECA62D71553057100ECFC0A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CECA62D61553057100ECFC0A /* libz.dylib */; };
+		CECA62DB15530C7100ECFC0A /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECA62DA15530C7100ECFC0A /* image1.jpg */; };
 		CEF1CEC815350FF100FDF292 /* SplitTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */; };
 		CEF1CECC1535107400FDF292 /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECA1535107400FDF292 /* blue_button.png */; };
 		CEF1CECD1535107400FDF292 /* blue_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CECB1535107400FDF292 /* blue_button@2x.png */; };
@@ -32,7 +35,6 @@
 		CEF1CEEC15374FD600FDF292 /* TimeParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CEEB15374FD600FDF292 /* TimeParse.m */; };
 		CEF1CEF0153774AB00FDF292 /* NationalRowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */; };
 		CEF1CEF1153774AB00FDF292 /* NationalRowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */; };
-		CEF1CEF31537757800FDF292 /* Image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF21537757800FDF292 /* Image1.jpg */; };
 		CEF1CEF61537797A00FDF292 /* glyphicons_261_buoy.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */; };
 		CEF1CEF71537797A00FDF292 /* glyphicons_261_buoy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF51537797A00FDF292 /* glyphicons_261_buoy@2x.png */; };
 		CEF1CEFA1537798A00FDF292 /* glyphicons_266_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF1CEF81537798A00FDF292 /* glyphicons_266_flag.png */; };
@@ -72,6 +74,10 @@
 		CEB8A20215470C1600D7A1C5 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		CEB8A20415489A8A00D7A1C5 /* glyphicons_012_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_012_heart.png; sourceTree = "<group>"; };
 		CEB8A20515489A8A00D7A1C5 /* glyphicons_012_heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_012_heart@2x.png"; sourceTree = "<group>"; };
+		CECA62D2155304F100ECFC0A /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		CECA62D3155304F100ECFC0A /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		CECA62D61553057100ECFC0A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CECA62DA15530C7100ECFC0A /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		CEF1CEC715350FF100FDF292 /* SplitTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitTimeViewController.xib; sourceTree = "<group>"; };
 		CEF1CECA1535107400FDF292 /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
 		CEF1CECB1535107400FDF292 /* blue_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button@2x.png"; sourceTree = "<group>"; };
@@ -82,7 +88,6 @@
 		CEF1CEED153774AB00FDF292 /* NationalRowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NationalRowingViewController.h; sourceTree = "<group>"; };
 		CEF1CEEE153774AB00FDF292 /* NationalRowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NationalRowingViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CEF1CEEF153774AB00FDF292 /* NationalRowingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NationalRowingViewController.xib; sourceTree = "<group>"; };
-		CEF1CEF21537757800FDF292 /* Image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image1.jpg; sourceTree = "<group>"; };
 		CEF1CEF41537797A00FDF292 /* glyphicons_261_buoy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_261_buoy.png; sourceTree = "<group>"; };
 		CEF1CEF51537797A00FDF292 /* glyphicons_261_buoy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_261_buoy@2x.png"; sourceTree = "<group>"; };
 		CEF1CEF81537798A00FDF292 /* glyphicons_266_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_266_flag.png; sourceTree = "<group>"; };
@@ -104,9 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECA62D71553057100ECFC0A /* libz.dylib in Frameworks */,
 				9D00C0F015323CF100D7A3E4 /* UIKit.framework in Frameworks */,
 				9D00C0F215323CF100D7A3E4 /* Foundation.framework in Frameworks */,
 				9D00C0F415323CF100D7A3E4 /* CoreGraphics.framework in Frameworks */,
+				CECA62D4155304F100ECFC0A /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +123,7 @@
 		9D00C0E015323CF100D7A3E4 = {
 			isa = PBXGroup;
 			children = (
+				CECA62D61553057100ECFC0A /* libz.dylib */,
 				CEB8A1C9153CCA8200D7A1C5 /* Custom */,
 				CEF1CEC91535105B00FDF292 /* Images */,
 				CEFE338B1534F8130082E284 /* Model */,
@@ -147,6 +155,8 @@
 		9D00C0F515323CF100D7A3E4 /* Rowing */ = {
 			isa = PBXGroup;
 			children = (
+				CECA62D2155304F100ECFC0A /* libTestFlight.a */,
+				CECA62D3155304F100ECFC0A /* TestFlight.h */,
 				9D00C0FE15323CF100D7A3E4 /* AppDelegate.h */,
 				9D00C0FF15323CF100D7A3E4 /* AppDelegate.m */,
 				9D00C0F615323CF100D7A3E4 /* Supporting Files */,
@@ -179,7 +189,7 @@
 		CEF1CEC91535105B00FDF292 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1CEF21537757800FDF292 /* Image1.jpg */,
+				CECA62DA15530C7100ECFC0A /* image1.jpg */,
 				CEB8A20215470C1600D7A1C5 /* image2.jpg */,
 				CEB8A1FA1545E18400D7A1C5 /* image3.jpg */,
 				CEB8A1F81545E13E00D7A1C5 /* image4.jpg */,
@@ -293,7 +303,6 @@
 				CEF1CED01535109500FDF292 /* gray_button.png in Resources */,
 				CEF1CED11535109500FDF292 /* gray_button@2x.png in Resources */,
 				CEF1CEF1153774AB00FDF292 /* NationalRowingViewController.xib in Resources */,
-				CEF1CEF31537757800FDF292 /* Image1.jpg in Resources */,
 				CEF1CEF61537797A00FDF292 /* glyphicons_261_buoy.png in Resources */,
 				CEF1CEF71537797A00FDF292 /* glyphicons_261_buoy@2x.png in Resources */,
 				CEF1CEFA1537798A00FDF292 /* glyphicons_266_flag.png in Resources */,
@@ -306,6 +315,7 @@
 				CEB8A20315470C1600D7A1C5 /* image2.jpg in Resources */,
 				CEB8A20615489A8A00D7A1C5 /* glyphicons_012_heart.png in Resources */,
 				CEB8A20715489A8A00D7A1C5 /* glyphicons_012_heart@2x.png in Resources */,
+				CECA62DB15530C7100ECFC0A /* image1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +405,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rowing/Rowing-Prefix.pch";
 				INFOPLIST_FILE = "Rowing/Rowing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Rowing\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,10 +417,18 @@
 		9D00C10515323CF100D7A3E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeffrey Rosenbluth (A25GNGS388)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jeffrey Rosenbluth (A25GNGS388)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rowing/Rowing-Prefix.pch";
 				INFOPLIST_FILE = "Rowing/Rowing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Rowing\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5A09F9BD-29F1-4FCF-8245-3E5F537C6D1C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5A09F9BD-29F1-4FCF-8245-3E5F537C6D1C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

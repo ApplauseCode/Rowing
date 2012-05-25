@@ -76,7 +76,6 @@
 						<string key="NSFrame">{{141, 244}, {38, 36}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -94,7 +93,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC42IDAuOCAxAA</bytes>
+							<bytes key="NSRGB">MC44ODU1ODY3OTgyIDAuNDMyMzM0MDA1OCAwLjAwNjY2MTI1OTEwNAA</bytes>
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -150,7 +149,7 @@ ZCBSb3dpbmcgRGlzdGluZ3Vpc2hlZCBTZXJ2aWNlIHRvIFJvd2luZyBBd2FyZC4</bytes>
 				<reference key="NSNextKeyView" ref="48053069"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC42IDAuOCAxAA</bytes>
+					<bytes key="NSRGB">MC44ODU1ODY3OTgyIDAuNDMyMzM0MDA1OCAwLjAwNjY2MTI1OTEwNAA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
