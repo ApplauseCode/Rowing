@@ -37,6 +37,7 @@
 @synthesize stopWatch;
 @synthesize startButton;
 @synthesize navItems;
+@synthesize barTitle;
 @synthesize resetButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -87,12 +88,24 @@
     [self setLaneNames:nil];
     [self setNavBar:nil];
     [self setNavItems:nil];
+    [self setBarTitle:nil];
     [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    BOOL aTimerIsOn = NO;
+    for (int i = 0; i < LANES; i++) {
+        if ([[timersOn objectAtIndex:i] boolValue]) {
+            aTimerIsOn = YES;
+        }
+    }
+    return !aTimerIsOn;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -126,7 +139,7 @@
 - (IBAction)spmButton:(UIButton *)sender {
     double strokes = [[lanes objectAtIndex:sender.tag] spm:[NSDate date]];
     NSString *spmString;
-    spmString = [NSString stringWithFormat:@"%3.1f",strokes];
+    spmString = [NSString stringWithFormat:@"%2.0f",strokes + .5];
     [[spmLabels objectAtIndex:sender.tag] setText:spmString];
 }
 

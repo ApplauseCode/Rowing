@@ -17,9 +17,9 @@
 @property (strong, nonatomic) UIBarButtonItem *resetButton;
 @property (strong, nonatomic) UIBarButtonItem *startButton;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navItems;
+@property (weak, nonatomic) IBOutlet UINavigationItem *barTitle;
 
 - (IBAction)spmButton:(id)sender;
 - (void)startAll:(id)sender;
 - (void)resetAll:(id)sender;
-
 @end

@@ -3,7 +3,7 @@
 //  Rowing
 //
 //  Created by Jeffrey Rosenbluth on 12/5/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Applause Code. All rights reserved.
 //
 
 #import "SplitTimeViewController.h"
@@ -16,8 +16,6 @@
 @property (nonatomic, assign) double distance;
 @property (nonatomic, assign) CGFloat yBottom;
 @property (nonatomic, weak) NSArray *bottom;
-//@property (nonatomic, strong) CABasicAnimation *mover;
-
 
 - (void)calc;
 - (void)setControlsToDefaults;
@@ -74,27 +72,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[self navigationItem] setTitle:@"Port Rowing"];
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
-//    [button addTarget:self action:@selector(about:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *infoItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-//    [[self navigationItem] setLeftBarButtonItem:infoItem];
-//    UIBarButtonItem *help = [[UIBarButtonItem alloc] initWithTitle:@"Help" style:UIBarButtonItemStylePlain target:self action:@selector(help:)];     
-//    [[self navigationItem] setRightBarButtonItem:help];
+
     [timeButton setSelected:YES];
     [self setYBottom:[timeField frame].origin.y];
     [self setBottom:timeControls];
-//    mover = [CABasicAnimation animationWithKeyPath:@"position"];
-//    [mover setDuration:120];
-//    [mover setRepeatCount:HUGE_VALF];
-//    [mover setTimingFunction:[CAMediaTimingFunction 
-//                              functionWithName:kCAMediaTimingFunctionLinear]];
-//    [mover setToValue:[NSValue valueWithCGPoint:CGPointMake(800, 208)]];
-//    [[[self background] layer] addAnimation:mover forKey:@"SlowMove"];
-//    [[NSNotificationCenter defaultCenter] addObserver: self
-//                                             selector: @selector(handleWillEnterForeground:) 
-//                                                 name: UIApplicationWillEnterForegroundNotification
-//                                               object: nil];
 }
 
 - (void)viewDidUnload
@@ -114,32 +95,8 @@
     [self setDistControls:nil];
     [self setDistControls:nil];
     [self setTimeControls:nil];
-//    [self setMover:nil];
     [super viewDidUnload];
 }
-
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    CALayer *layer = [[self background] layer];
-//    CFTimeInterval pausedTime = [layer timeOffset];
-//    layer.speed = 1.0;
-//    layer.timeOffset = 0.0;
-//    layer.beginTime = 0.0;
-//    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
-//    layer.beginTime = timeSincePause;
-//}
-
-//-(void) handleWillEnterForeground:(id)sender
-//{
-//    [[[self background] layer] removeAllAnimations];
-//    mover = [CABasicAnimation animationWithKeyPath:@"position"];
-//    [mover setDuration:120];
-//    [mover setRepeatCount:HUGE_VALF];
-//    [mover setTimingFunction:[CAMediaTimingFunction 
-//                              functionWithName:kCAMediaTimingFunctionLinear]];
-//    [mover setToValue:[NSValue valueWithCGPoint:CGPointMake(800, 208)]];
-//    [[[self background] layer] addAnimation:mover forKey:@"SlowMove"];
-//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -310,10 +267,6 @@
                                                              UITextAttributeTextColor,
                                                              [UIFont fontWithName:@"Georgia-Bold" size:22.0], UITextAttributeFont,
                                                              nil]];
-//    CALayer *layer = [[self background] layer];
-//    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
-//    layer.speed = 0.0;
-//    layer.timeOffset = pausedTime;
     [[self navigationController] presentModalViewController:infoNav animated:YES];
 }
 

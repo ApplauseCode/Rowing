@@ -3,7 +3,7 @@
 //  Rowing
 //
 //  Created by Reed Rosenbluth on 4/8/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Applause Code. All rights reserved.
 //
 
 #import "TapViewViewController.h"
