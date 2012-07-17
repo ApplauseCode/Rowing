@@ -18,6 +18,7 @@
 @property (strong, nonatomic) UIBarButtonItem *startButton;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navItems;
 @property (weak, nonatomic) IBOutlet UINavigationItem *barTitle;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *blades;
 
 - (IBAction)spmButton:(id)sender;
 - (void)startAll:(id)sender;

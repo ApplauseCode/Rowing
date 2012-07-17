@@ -31,6 +31,11 @@
     return self;
 }
 
+//- (void)resetSPM {
+//    for (int i = 0; i < NUMBER_OF_TAPS; i++)
+//        [times replaceObjectAtIndex:i withObject:[[NSDate date]  dateByAddingTimeInterval:i * 3]];
+//}
+
 - (double)spm: (NSDate *)d
 {
     double dif = 0.0;

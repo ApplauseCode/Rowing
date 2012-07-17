@@ -15,5 +15,6 @@
 - (double)spm: (NSDate *)d;
 - (double)updateElapsedTime: (NSDate *)d;
 - (void)resetStartTime;
+//- (void)resetSPM;
 
 @end

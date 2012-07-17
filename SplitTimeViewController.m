@@ -61,8 +61,10 @@
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        [[self tabBarItem] setTitle:@"Split"];
-        [[self tabBarItem] setImage:[UIImage imageNamed:@"glyphicons_261_buoy"]];
+//        [[self tabBarItem] setTitle:@"Split"];
+//        [[self tabBarItem] setImage:[UIImage imageNamed:@"glyphicons_261_buoy"]];
+        [[self tabBarItem] setTitle:@"Ergometer"];
+        [[self tabBarItem] setImage:[UIImage imageNamed:@"erg2"]];
         splitSeconds = 100.0;
         distance = 2000.0;
         totalSeconds = 400.0;

@@ -14,7 +14,7 @@
 
 @implementation NationalRowingViewController
 @synthesize photoScroll;
-@synthesize photoPageControl;
+//@synthesize photoPageControl;
 @synthesize photoNum;
 
 const CGFloat kScrollObjHeight	= 199.0;
@@ -49,36 +49,39 @@ const NSUInteger kNumImages		= 5;
 		}
 	}
 	// set the content size so it can be scrollable
-	[photoScroll setContentSize:CGSizeMake((kNumImages * kScrollObjWidth), [photoScroll bounds].size.height)];
+	[photoScroll setContentSize:CGSizeMake(320,960)];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [photoScroll setBackgroundColor:[UIColor blackColor]];
-	[photoScroll setCanCancelContentTouches:NO];
-    [photoScroll setDelegate:self];
-	photoScroll.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-	photoScroll.clipsToBounds = YES;		
-	photoScroll.scrollEnabled = YES;	
-	photoScroll.pagingEnabled = YES;
-	photoScroll.showsHorizontalScrollIndicator = NO;
-	for (int i = 1; i <= kNumImages; i++)
-	{
-		NSString *imageName = [NSString stringWithFormat:@"image%d.jpg", i];
-		UIImage *image = [UIImage imageNamed:imageName];
-		UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-		
-		CGRect rect = imageView.frame;
-		rect.size.height = kScrollObjHeight;
-		rect.size.width = kScrollObjWidth;
-		imageView.frame = rect;
-		imageView.tag = i;
-		[photoScroll addSubview:imageView];
-	}
-	self.photoNum = 0;
-//  self.photoPageControl.defersCurrentPageDisplay = YES;
-	[self layoutScrollImages];	// now place the photos in serial layout within the scrollview
+    [photoScroll setContentSize:CGSizeMake(320,2600)];
+
+//    [photoScroll setFrame:CGRectMake(0, 44, 320, 367)];
+//    [photoScroll setBackgroundColor:[UIColor blackColor]];
+//	[photoScroll setCanCancelContentTouches:NO];
+//    [photoScroll setDelegate:self];
+//	photoScroll.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+//	photoScroll.clipsToBounds = YES;		
+//	photoScroll.scrollEnabled = YES;	
+//	photoScroll.pagingEnabled = YES;
+//	photoScroll.showsHorizontalScrollIndicator = NO;
+//	for (int i = 1; i <= kNumImages; i++)
+//	{
+//		NSString *imageName = [NSString stringWithFormat:@"image%d.jpg", i];
+//		UIImage *image = [UIImage imageNamed:imageName];
+//		UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//		
+//		CGRect rect = imageView.frame;
+//		rect.size.height = kScrollObjHeight;
+//		rect.size.width = kScrollObjWidth;
+//		imageView.frame = rect;
+//		imageView.tag = i;
+//		[photoScroll addSubview:imageView];
+//	}
+//	self.photoNum = 0;
+////  self.photoPageControl.defersCurrentPageDisplay = YES;
+//	[self layoutScrollImages];	// now place the photos in serial layout within the scrollview
 }
 
 
@@ -95,13 +98,13 @@ const NSUInteger kNumImages		= 5;
         self.photoNum = 3;
     else self.photoNum = 4;
 
-    photoPageControl.currentPage = self.photoNum;
+//    photoPageControl.currentPage = self.photoNum;
 }
 
 - (void)viewDidUnload
 {
     [self setPhotoScroll:nil];
-    [self setPhotoPageControl:nil];
+//    [self setPhotoPageControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -19,6 +19,7 @@
 @property (nonatomic,strong) NSMutableArray *lanes;
 @property (nonatomic, strong) NSTimer *stopWatch;
 @property (nonatomic, strong) NSMutableArray *timersOn;
+@property (nonatomic, strong) NSArray *bladeNames;
 
 - (void)stopWatchTick:(NSTimer *)aTimer;
 - (void)timerTap:(TapGestureRecognizerWithTag *)gr;
@@ -38,7 +39,9 @@
 @synthesize startButton;
 @synthesize navItems;
 @synthesize barTitle;
+@synthesize blades;
 @synthesize resetButton;
+@synthesize bladeNames;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,8 +50,8 @@
     lanes = [[NSMutableArray alloc] initWithCapacity:LANES];
     timersOn = [[NSMutableArray alloc] initWithCapacity:LANES];
     if (self) {
-        [[self tabBarItem] setTitle:@"Strokes"];
-        [[self tabBarItem] setImage:[UIImage imageNamed:@"glyphicons_025_binoculars"]];
+        [[self tabBarItem] setTitle:@"Race"];
+        [[self tabBarItem] setImage:[UIImage imageNamed:@"race2"]];
         for (int i = 0; i < LANES; i++) {
             lane = [[Lane alloc] init];
             [lanes addObject:lane];
@@ -74,10 +77,16 @@
         [[self.timeLabels  objectAtIndex:i] addGestureRecognizer:timeTap];
         [[self.timeLabels objectAtIndex:i] addGestureRecognizer:timerLongPress];
         [[laneNames objectAtIndex:i] setDelegate:self];
+        bladeNames = [NSArray arrayWithObjects:@"argentina", @"australia", @"austria", @"belgium",
+                      @"brazil", @"canada", @"chile", @"cyprus", @"cz", @"czech", @"denmark", @"finland",
+                      @"france", @"gb", @"germany", @"greece", @"hk", @"hungart", @"ireland", @"italy",
+                      @"japan", @"mexico", @"netherlands", @"norway", @"nz", @"peru", @"phillippines",
+                      @"portugal", @"ring", @"rings", @"russia", @"serbia", @"southAfrica", @"spain",
+                      @"sweeden", @"switzerland", @"usa", nil];
     }
-    startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(startAll:)];
-    resetButton = [[UIBarButtonItem alloc] initWithTitle: @"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetAll:)];
-    [navItems setRightBarButtonItem:startButton];
+//    startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(startAll:)];
+    resetButton = [[UIBarButtonItem alloc] initWithTitle: @"Start" style:UIBarButtonItemStylePlain target:self action:@selector(resetAll:)];
+//    [navItems setRightBarButtonItem:startButton];
     [navItems setLeftBarButtonItem:resetButton];
 }
 
@@ -89,6 +98,7 @@
     [self setNavBar:nil];
     [self setNavItems:nil];
     [self setBarTitle:nil];
+    [self setBlades:nil];
     [super viewDidUnload];
 }
 
@@ -117,6 +127,11 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     [self animateTextField: textField up: NO];
+//    int tag = textField.tag;
+    [[blades objectAtIndex:0] setImage:[UIImage imageNamed:@"argentina"]];
+    [[blades objectAtIndex:2] setImage:[UIImage imageNamed:@"rings"]];
+    [[blades objectAtIndex:4] setImage:[UIImage imageNamed:@"cz"]];
+    
 }
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up
@@ -150,12 +165,21 @@
     }
 }
 
-- (void)resetAll:(id)sender{
-    for (int tag = 0; tag < 6; tag++) {
-        
-        [[self.timeLabels objectAtIndex:tag] setText:[TimeParse toString:0.0]];
-        [self.timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]]; 
-        [[self.lanes objectAtIndex:tag] resetStartTime];
+- (void)resetAll:(UIBarButtonItem *)sender{
+    if (sender.title == @"Reset") {
+        sender.title = @"Start";
+        for (int tag = 0; tag < 6; tag++) {
+            [[self.timeLabels objectAtIndex:tag] setText:[TimeParse toString:0.0]];
+            [self.timersOn replaceObjectAtIndex:tag withObject:[NSNumber numberWithBool:NO]]; 
+            [[self.lanes objectAtIndex:tag] resetStartTime];
+            [[self.spmLabels objectAtIndex:tag] setText:@"spm"];
+        }
+    } else {
+        sender.title = @"Reset";
+        for (int i = 0; i < LANES; i++) {
+            [[lanes objectAtIndex:i] setStartTime:[NSDate date]];
+            [timersOn replaceObjectAtIndex:i withObject:[NSNumber numberWithBool:YES]];
+        }
     }
 }
 
